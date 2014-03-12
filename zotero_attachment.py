@@ -126,6 +126,8 @@ class zotero_cleaner(object):
         self.clean_file_folder()
         self.check_attachments()
         self.remove_duplicate_attachments()
+        self.con.commit()
+        self.con.close()
 
 
 if __name__ == '__main__':
